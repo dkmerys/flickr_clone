@@ -13,7 +13,7 @@ class ImagesController < ApplicationController
   def create
     @image = Images.new(image_params)
     if @image.save
-      flash[:notice] "Image successfully added!"
+      flash[:notice] = "Image successfully added!"
       redirect_to images_path
     else
       render :new
